@@ -63,9 +63,7 @@ the local machine, we have to install both `Rails` and `Node`.
 - Database initialization
 
   ```bash
-  rails db:create
-  rails db:schema:load
-  rails db:seed
+  rails db:prepare
   ```
 
 - Foreman installation
