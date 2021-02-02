@@ -1,7 +1,8 @@
-# E Learning System
+# Template
 
-//TODO Description
+**Description**
 
+This is a template for running Rails 6 and React in the same application.
 The backend of this project is developed in Rails and the Frontend part in React. To run this project in
 the local machine, we have to install both `Rails` and `Node`.
 
@@ -9,7 +10,7 @@ the local machine, we have to install both `Rails` and `Node`.
 
 - Clone the repository
   ```bash
-  git@github.com:rajibds/e-learning-system.git
+  git@github.com:rajibds/rails-template.git
   ```
 - Homebrew:
   ```bash
