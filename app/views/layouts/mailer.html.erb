@@ -3,11 +3,153 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
-      /* Email styles need to be inline */
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #505050;
+        font-family: "Roboto", "Helvetica", "sans-serif";
+        font-size: 16px;
+      }
+      a, a:link, a:visited {
+        color: #165a7c;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      .center {
+        clear: both;
+        margin: auto;
+        width: 608px;
+      }
+      .center:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      .logo {
+        padding: 10px 0 0;
+      }
+      .logo img {
+        margin: 0 0 5px;
+        max-width: 304px;
+        width: 100%;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      .tagline {
+        color: #44474D;
+        font-style: italic;
+        font-size: 11px;
+        margin: -16px 0 8px;
+        text-align: right;
+      }
+      h1 {
+        background: #5c5e65;
+        border-radius: 8px 8px 0 0;
+        color: white;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px 14px;
+      }
+      .message-body {
+        background: #ECEEF3;
+        border-radius: 0 0 8px 8px;
+        padding: 24px;
+      }
+      .greeting {
+        margin: 0 0 20px;
+      }
+      .strong {
+        font-weight: bold;
+      }
+      .regards {
+        margin: 20px 0 0;
+      }
+      .regards span {
+        display: block;
+      }
+      .button::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+      .button, a.button {
+        background: #C44847;
+        border: none;
+        border-radius: 48px;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px;
+        margin: 19.2px 0 20.4px;
+        padding: 6.4px 19.2px;
+      }
+
+      .button--inline.button {
+        margin-bottom: -14px;
+      }
+
+      a.button:hover {
+        text-decoration: none;
+      }
+
+      a.deny {
+        background: #e84767;
+      }
+
+      .footer {
+        font-size: 12px;
+        padding: 15px 0;
+        text-align: right;
+      }
+      .footer p {
+        color: #44474D;
+        margin: 0 0 4px;
+      }
+      @media (max-width: 800px) {
+        .center {
+          width: 100%;
+        }
+        .tagline {
+          float: none;
+          margin: 15px 0 0;
+        }
+        h1 {
+          font-size: 25px;
+        }
+        .logo, h1, .message-body, .footer {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="center">
+      <h1>
+        <%= yield :subject %>
+      </h1>
+      <div class="message-body">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

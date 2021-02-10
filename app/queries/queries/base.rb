@@ -1,5 +1,6 @@
 module Queries
   class Base
+    # TODO: how does Raffael do it?
     def initialize(params:, relation:)
       @params = params
       @relation = relation
